@@ -4,6 +4,8 @@ CFLAGS = -g -Wall
 
 CC = g++
 
+all: $(TARGET) run
+
 $(TARGET): $(TARGET).o classes/Characters.o classes/Rooms.o
 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).o classes/Characters.o classes/Rooms.o
 
