@@ -9,12 +9,15 @@
 
 class Room {
     public:
-        static int roomID;
+        static int ID;
         std::string name;
         std::string description;
-        std::vector<NPC> characters;
+        std::vector<NPC*> characters;
+        Inventory items;
         std::vector<std::string> connectedRooms; //filled with room names
         Room();
+        Room* makeStartRoom();
+        Room* makeHallsKitchen();
 
 };
 
