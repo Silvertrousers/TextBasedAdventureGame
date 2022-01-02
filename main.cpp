@@ -2,24 +2,21 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include "classes/Characters.h"
+#include "classes/Rooms.h"
+
+// class Relationship {
+
+// };
 
 
 
-class inventory {
-    std::vector<Item> Items;
-    
-};
-
-class Player {
-    Inventory inventory;
-
-};
 
 class StoryNode {
     public:
         std::vector<StoryNode*> Decisions;
         std::string Text;
-        location
+       // location
 };
 
 //need to be able to add story lines
@@ -28,9 +25,10 @@ class StoryNode {
 
 //need to be able to construct the story graph from a set of nodes, charcters
 int main(){
-    StoryNode
     std::cout << "hello world" << std::endl;
+    GameWorld* World = new GameWorld;
+
+    Room* currentRoom = World->rooms["Start Room"];
+    std::cout << currentRoom->description << std::endl;
     return 0;
 }
-
-basically it will look like
